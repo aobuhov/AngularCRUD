@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     'firstname',
     'surname',
     'email',
-    'birhtdate',
+    'birthdate',
     'gender',
     'education',
     'company',
