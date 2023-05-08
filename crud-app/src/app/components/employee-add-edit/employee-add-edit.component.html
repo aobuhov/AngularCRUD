@@ -34,6 +34,17 @@
       <mat-radio-button value="others">Others</mat-radio-button>
     </mat-radio-group>
   </div>
+
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>Education</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let value of education" [value]="value">
+          {{value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 </div>
 <div mat-dialog-actions>
   <button mat-raised-button>Cancel</button>

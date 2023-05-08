@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./employee-add-edit.component.scss']
 })
 export class EmployeeAddEditComponent {
+  education: string[] = [
+    'Matric',
+    'Diploma',
+    'Intermediate',
+    'Graduate',
+    'Postgraduate',
+  ];
 
 }
