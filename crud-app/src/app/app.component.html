@@ -23,7 +23,7 @@
     <!-- firstname Column -->
     <ng-container matColumnDef="firstname">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> firstname </th>
-      <td mat-cell *matCellDef="let row"> {{row.firstname}}% </td>
+      <td mat-cell *matCellDef="let row"> {{row.firstname}} </td>
     </ng-container>
 
     <!-- surname Column -->
@@ -40,7 +40,7 @@
 
     <ng-container matColumnDef="birthdate">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> birthdate </th>
-      <td mat-cell *matCellDef="let row"> {{row.birthdate}} </td>
+      <td mat-cell *matCellDef="let row"> {{row.birthdate | date:'yyyy-MM-dd'}} </td>
     </ng-container>
 
     <ng-container matColumnDef="gender">
@@ -60,12 +60,12 @@
 
     <ng-container matColumnDef="experience">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> experience </th>
-      <td mat-cell *matCellDef="let row"> {{row.experience}} </td>
+      <td mat-cell *matCellDef="let row"> {{row.experience | currency:'EUR'}} </td>
     </ng-container>
 
     <ng-container matColumnDef="package">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> package </th>
-      <td mat-cell *matCellDef="let row"> {{row.package}} </td>
+      <td mat-cell *matCellDef="let row"> {{row.package | currency}} </td>
     </ng-container>
 
 
