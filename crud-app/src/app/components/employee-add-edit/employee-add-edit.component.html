@@ -2,17 +2,17 @@
   <h1>Employee form</h1>
 </div>
 <div mat-dialog-content class="content">
-  <div class="row>">
+  <div class="row">
     <mat-form-field appearance="outline">
       <mat-label>Firstname</mat-label>
       <input matInput type="text" placeholder="Ex. Aleksei">
     </mat-form-field>
     <mat-form-field appearance="outline">
-      <mat-label matInput type="text" placeholder="Ex. Obukhov">Surname</mat-label>
-      <input matInput>
+      <mat-label>Surname</mat-label>
+      <input matInput type="text" placeholder="Ex. Obukhov">
     </mat-form-field>
   </div>
-  <div class="row>">
+  <div class="row">
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
       <input matInput type="email" placeholder="Ex. mail@gmail.com">
@@ -43,6 +43,22 @@
           {{value}}
         </mat-option>
       </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Company</mat-label>
+      <input matInput type="text" placeholder="Ex. Google">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>Experience</mat-label>
+      <input matInput type="text" placeholder="Ex. 4">
+      <mat-hint>in EUR</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Package</mat-label>
+      <input matInput type="text" placeholder="Ex. 12">
+      <mat-hint>in USD</mat-hint>
     </mat-form-field>
   </div>
 </div>
