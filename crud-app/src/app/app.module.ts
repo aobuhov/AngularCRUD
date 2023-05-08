@@ -8,6 +8,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from "@angular/material/button";
 import { EmployeeAddEditComponent } from './components/employee-add-edit/employee-add-edit.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { EmployeeAddEditComponent } from './components/employee-add-edit/employe
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
