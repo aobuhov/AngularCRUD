@@ -9,6 +9,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from "@angular/material/button";
 import { EmployeeAddEditComponent } from './components/employee-add-edit/employee-add-edit.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
