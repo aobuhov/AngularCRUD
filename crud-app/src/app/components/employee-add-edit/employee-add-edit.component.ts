@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {EmployeeService} from "../../services/employee.service";
-import {MatDialogRef} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-employee-add-edit',
   templateUrl: './employee-add-edit.component.html',
   styleUrls: ['./employee-add-edit.component.scss']
 })
-export class EmployeeAddEditComponent {
+export class EmployeeAddEditComponent implements OnInit {
 
   employeeForm!: FormGroup;
 
@@ -23,7 +23,9 @@ export class EmployeeAddEditComponent {
   constructor(
     private _fb: FormBuilder,
     private _employeeService: EmployeeService,
-    private _dialogRef: MatDialogRef<EmployeeAddEditComponent>) {
+    private _dialogRef: MatDialogRef<EmployeeAddEditComponent>,
+    @Inject(MAT_DIALOG_DATA) private data:any
+  ) {
 
     this.employeeForm = this._fb.group({
       firstname:'',
@@ -37,6 +39,9 @@ export class EmployeeAddEditComponent {
       package:''
     });
   }
+ngOnInit() {
+    this.employeeForm.patchValue(this.data);
+}
 
   onFormSubmit() {
     if(this.employeeForm.valid) {
