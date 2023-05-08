@@ -40,7 +40,15 @@ export class AppComponent implements OnInit {
   }
 
   openAddEditEmployeeForm() {
-    this._dialog.open(EmployeeAddEditComponent);
+    const dialogRef = this._dialog.open(EmployeeAddEditComponent);
+    dialogRef.afterClosed().subscribe({
+      next: (value) => {
+        if(value) {
+          this.getEmployeeList();
+        }
+      },
+      error: console.error
+    });
   }
 
   getEmployeeList() {
