@@ -45,13 +45,24 @@ ngOnInit() {
 
   onFormSubmit() {
     if(this.employeeForm.valid) {
-      this._employeeService.addEmployee(this.employeeForm.value).subscribe({
-        next: (value:any) => {
-          alert('Employee added');
-          this._dialogRef.close(true);
-        },
-        error: err => console.log(err)
-      });
+      if(this.data) {
+        this._employeeService.updateEmployee(this.data.id, this.employeeForm.value).subscribe({
+          next: (value:any) => {
+            alert('Employee updated');
+            this._dialogRef.close(true);
+          },
+          error: err => console.log(err)
+        });
+      } else {
+        this._employeeService.addEmployee(this.employeeForm.value).subscribe({
+          next: (value:any) => {
+            alert('Employee added');
+            this._dialogRef.close(true);
+          },
+          error: err => console.log(err)
+        });
+      }
+
     }
   }
 
